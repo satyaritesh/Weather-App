@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+
+    <div class="search-box">
+        <input type="text" id="city-input" placeholder="Enter city name">
+        <div class="search-icon" >
+            <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        
+    </div>
+
+    <div class="weather-index">
+        <div class="rt-txt">
+            <h2 id="city-name">New York</h2>
+            <div class="flx">
+                 <h1 class="forecast-title">60°C</h1>
+                 <h4 id="weather-condition">Partly Cloudy</h4>
+            </div>
+         </div>
+        <div class="lf-txt">
+             
+             <h3 id="date">Wed, 07 Aug</h3>
+        </div>
+        
+    </div>
+     <h3 class="weather-hd"> Weather Details</h3>
+     <h3 class="forecast-hd">Detailed Forecast </h3>
+    <div class="containerr">
+     
+        <div class="weather-details">
+            <div class="wdc">
+                <p id="hd">Feels Like</p>
+                <p class="fl" id="mtxt">57</p>
+            </div>
+            <div class="wdc">
+                <p id="hd">ENE Wind</p>
+                <p class="ene" id="mtxt">13 mi/h</p>
+            </div>
+            <div class="wdc">
+                <p id="hd">Humidity</p>
+                <p class="hum" id="mtxt">82%</p>
+            </div>
+          
+            <div class="wdc">
+                 <p id="hd">UV</p>
+                 <p class= "UV" id="mtxt">0</p>
+            </div>
+            <div class="wdc">
+                 <p id="hd">Visibility</p>
+                 <p class="vis" id="mtxt">10 mi</p>
+            </div>
+           <div class="wdc">
+            <p id="hd">Pressure</p>
+            <p class="pres" id="mtxt">1022 hPa</p>
+           </div>
+          
+        </div>
+       <h3 class="forecastt-hd">Detailed Forecast </h3>
+        <div class="sx-day-weather-forecast-grid">
+    <div class="wfc">
+        <p id="hd">Sunrise</p>
+        <p class="day1t" id="mtxt">60°C</p>
+    </div>
+    <div class="wfc">
+        <p id="hd">Sunset</p>
+        <p class="day2t"id="mtxt">61°C</p>
+    </div>
+    <div class="wfc">
+        <p class= "mt" id="hd">Maximum Temperature</p>
+        <p class="day3t" id="mtxt">62°C</p>
+    </div>
+    <div class="wfc">
+        <p class= "mt" id="hd">Minimum Temperature</p>
+        <p class="day4t" id="mtxt">59°C</p>
+    </div>
+    <div class="wfc">
+        <p id="hd">Ground Level</p>
+        <p class="day5t" id="mtxt">60°C</p>
+    </div>
+    <div class="wfc">
+        <p id="hd">Sea Level</p>
+        <p class="day6t" id="mtxt">58°C</p>
+    </div>
+</div>
+
+
+    </div>
+ 
+</body>
+</html>
