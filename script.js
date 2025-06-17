@@ -1,5 +1,6 @@
 const cityInput = document.getElementById('city-input');
 const searchButton = document.getElementById('search-btn');
+const datalist = document.getElementById("cities");
 const apikey = "e88f4c168290df0c371b74104455bcf9";
 const sunrise = document.querySelector('.day1t');
 const sunset = document.querySelector('.day2t');
@@ -16,6 +17,26 @@ const hum = document.querySelector('.hum');
 const UV = document.querySelector('.UV');
 const vis = document.querySelector('.vis');
 const pres = document.querySelector('.pres');
+
+cityInput.addEventListener("input", async () => {
+  const query = cityInput.value;
+
+
+
+  const apiKey = "e88f4c168290df0c371b74104455bcf9"; // Replace with your OpenWeather API key
+  const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=7&appid=${apiKey}`);
+  const cities = await response.json();
+
+  
+  datalist.innerHTML = '';
+
+
+  cities.forEach(city => {
+    const option = document.createElement('option');
+    option.value = `${city.name}, ${city.state}`;
+    datalist.appendChild(option);
+  });
+});
 
 
 searchButton.addEventListener('click', () => {
@@ -38,6 +59,8 @@ cityInput.addEventListener('keypress', function(event) {
         }
     }
 });
+
+
 
 
 async function displayWeatherData(city) {
